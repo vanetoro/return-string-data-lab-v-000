@@ -2,7 +2,7 @@
   <% @products.each do |p| %>
 <li><%= p.name %> - $<%= p.price %><br>
   <%= truncate (p.description) %>
-  <button id="js-more" data-id="<%= p.id %>">Inventory</button>
+  <button class="js-more" data-id="<%= p.id %>">Inventory</button>
   <button class="js-more" data-id="<%= p.id %>">More Info</button>
     <p id="inventory-<%= p.id %>"></p>
     <p id="moreInfo-<%= p.id %>"></p>
@@ -15,7 +15,7 @@
 
 <script type="text/javascript" charset="utf-8">
   $(function () {
-    $("#js-inventory").on('click',function() {
+    $(".js-morse").on('click',function() {
       var id = this.dataset.id;
       $.get('/products/' + id + "/description",function(description) {
         console.log(description)
