@@ -1,4 +1,4 @@
-<!-- <ul>
+<ul>
   <% @products.each do |p| %>
 <li><%= p.name %> - $<%= p.price %><br>
   <div id="product-<%= p.id %>"><%= truncate(p.description) %></div>
@@ -25,25 +25,4 @@
       })
     })
   })
-</script> -->
-
-
-<!-- <script type="text/javascript" charset="utf-8">
-$(function() {
-  $(".js-more").on('click', function() {
-    var id= $(this).data('id')
-    var description = $(this).data('description')
-    var inventory = parseInt($(this).data('inventory'))
-    // var id = this.dataset.id;
-    // var description = this.dataset.description
-    // var inventory = parseInt(this.dataset.inventory)
-    if (inventory == 0){
-      var data = 'Sold Out'
-    } else{
-      var data = 'Available'
-    }
-      $("#moreInfo-" + id).text(`${data} - ${description}`);
-  })
-}) -->
-<!--
-</script> -->
+</script>
