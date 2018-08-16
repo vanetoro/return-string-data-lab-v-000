@@ -5,7 +5,6 @@
   <button class="js-more" data-id="<%= p.id %>">Inventory</button>
   <button class="js-more" data-id="<%= p.id %>">More Info</button>
     <p id="inventory-<%= p.id %>"></p>
-    <p id="moreInfo-<%= p.id %>"></p>
 </li>
   <% end %>
 </ul>
@@ -19,7 +18,7 @@
       var id = this.dataset.id;
       $.get('/products/' + id + "/description",function(description) {
         $.get('/products/' + id + "/inventory", function(inventory) {
-        $("#inventory-" + id).text(`${description} - ${inventory}`);
+        $("#moreInfo-" + id).text(`${description} - ${inventory}`);
       })
       })
     })
