@@ -18,8 +18,8 @@
     $("#js-inventory").on('click',function() {
       var id = this.dataset.id;
       $.get('/products/' + id + "/description",function(description) {
-      $.get('/products/' + id + "/inventory", function(inventory) {
-        $("#inventory-" + id).text(data);
+        $.get('/products/' + id + "/inventory", function(inventory) {
+        $("#inventory-" + id).text(description - inventory);
         })
       })
     })
