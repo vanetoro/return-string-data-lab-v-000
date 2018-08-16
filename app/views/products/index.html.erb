@@ -21,6 +21,7 @@
         console.log(description)
       })
         $.get('/products/' + id + "/inventory", function(inventory) {
+          console.log(inventory)
         $("#inventory-" + id).text(description - inventory);
 
       })
