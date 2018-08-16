@@ -19,12 +19,12 @@
       var id = this.dataset.id;
       $.get('/products/' + id + "/description",function(description) {
         console.log(description)
+    
+        $.get('/products/' + id + "/inventory", function(inventory) {
+          console.log(inventory)
+        $("#inventory-" + id).text(description - inventory);
       })
-        // $.get('/products/' + id + "/inventory", function(inventory) {
-        //   console.log(inventory)
-        // $("#inventory-" + id).text(description - inventory);
-
-      // })
+      })
     })
   })
 
