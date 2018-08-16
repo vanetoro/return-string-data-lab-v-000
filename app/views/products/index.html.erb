@@ -2,7 +2,6 @@
   <% @products.each do |p| %>
 <li><%= p.name %> - $<%= p.price %><br>
   <%= truncate (p.description) %>
-  <button class="js-more" data-id="<%= p.id %>">Inventory</button>
   <button class="js-more" data-id="<%= p.id %>">More Info</button>
     <p id="moreInfo-<%= p.id %>"></p>
 </li>
